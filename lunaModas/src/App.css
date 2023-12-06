@@ -1,0 +1,44 @@
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  }
+  .brand{
+    
+    width:9rem;
+    height: 9rem;
+    margin-right: 1rem;
+    
+  }
+.cartWidget{
+  display:flex;
+  
+  align-items: end;
+ 
+
+}
+
+.nav{
+  margin-bottom:1rem;
+}
+
+ .navBar{
+  display:flex;
+  border-bottom: 2px solid black;
+  align-items:flex-end;
+ 
+  
+ }
+ .cartNumber{
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: blueviolet;
+  
+  color:white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  border:0.2px solid black;
+ }
