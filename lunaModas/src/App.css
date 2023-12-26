@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300&display=swap');
 
 .max-container{
   background-color: white;
   border-top-right-radius: 2%;
   border-top-left-radius: 2%;
-margin-top: 30rem;
-  width: 90%;  
-  
+
+  height: 90%;
+  width: 95%;
   display:flex;
   flex-direction: column;
   }
@@ -27,10 +28,7 @@ margin-top: 30rem;
   .nav-link:hover{
     background-color:palevioletred;
   }
-  .active{
-    background-color: pink !important;
-    color:black!important;
-  }
+  
   .brand{
     display:flex;
     
@@ -44,6 +42,13 @@ margin-top: 30rem;
     
     height: 100%;
     width: 85%;
+    transition: transform 0.5s
+  }
+  .chakra-card{
+    background-color: rgb(246, 220, 224);
+  }
+  .brand img:hover{
+    transform: rotate(360deg);
   }
 .cartWidget{
   display:flex;
@@ -54,15 +59,48 @@ margin-top: 30rem;
 
 .nav{
   margin-bottom:1rem;
+  font-family: 'Kalnia', serif;
+  color:pink;
+  font-size: 2rem;
 }
 
+.show{
+  background-color: rgb(215, 197, 197)!important;
+}
+.dropdown-menu{
+ width: 15rem;
  
+  
+}
+.nav-item{
+  width: 15rem;
+  padding:0 ;
+}
+.nav-link{
+  
+  padding: 0;
+ 
+}
+.dropdown-item {
+  padding: 0 ;
+  font-family: 'Kalnia', serif;
+ font-size: 1.5rem;
+}
+.link{
+  text-align: center;
+  display:block;
+  margin:0;
+ 
+  width: 100%;
+}
+
  .main{
+ width: 100%;
  
-  flex-direction:column;  
-  gap: 2rem; 
-  align-items: center;  
-  justify-content: center;
+ flex-direction:column;  
+ gap: 2rem; 
+ align-items: center;  
+ justify-content: center;
  }
  .products-container{
   display:flex;
@@ -87,7 +125,38 @@ margin-top: 30rem;
   height: 18rem;
   width: 17rem;
  }
+ .prod-carousel{
+  
+  height: 25rem;
+  width: 20rem;
+  
+ }
+ .product-detail{
+  width: 80%;
+  
+
+ }
  
+ .carousel-control-next-icon,
+ .carousel-control-prev-icon,
+ .carousel-indicators
+ {
+  background-color: rgb(86, 81, 81);
+  opacity: 0.5;
+ }
+ .prod-carousel-img{
+ height: 80%;
+ width: 8rem;
+ }
+ 
+  
+ .prod-carousel-img img{
+  height: 24rem;
+  width: 100%;
+  }
+  .descripcion-producto{
+    font-size: 1rem;
+  }
  .cartNumber{
   width: 1.2rem;
   height: 1.2rem;
@@ -99,4 +168,31 @@ margin-top: 30rem;
   font-size: 0.8rem;
   border-radius: 50%;
   border:0.2px solid black;
+ }
+ 
+ .product-imgen img{
+  height: 100%;
+  width: 100%;
+ }
+ .product-text{
+  border:3px solid red;
+ }
+ .datos-producto{
+  display:flex;
+  width: 100%;
+  
+  gap:4rem;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 2rem;
+ }
+ .button-tails{
+  margin-left:1rem;
+ }
+ .comprar{
+  display:flex;
+  align-items: center;
+  justify-content:right;
+  gap:10rem;
  }

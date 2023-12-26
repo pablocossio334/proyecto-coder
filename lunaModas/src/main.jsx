@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ChakraProvider } from '@chakra-ui/react'
+import './App.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ChakraProvider>
     <App />
