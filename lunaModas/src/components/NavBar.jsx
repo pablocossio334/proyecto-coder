@@ -34,6 +34,7 @@ const NavBar = () => {
       
     </Nav>
     <CartWidget/>
+    
    
     </Flex>
     

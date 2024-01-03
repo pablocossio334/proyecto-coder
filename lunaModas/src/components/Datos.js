@@ -7,6 +7,7 @@
     descripcion:"Short de lino- Pinzas en delantera. Composición: 55% Lino, 45% Algodón.Altura de la modelo: 1.78cm, es talle 38 y usa S",
     precio:2345,
     fechaIngreso:12/12/1999},
+    
     {id:"v002",
     nombre:"Vestido con estampa floral - multicolor",
     categoria:"vestidos",
@@ -20,7 +21,7 @@
       nombre:"Falda con cut-out y tajos laterales ",
       categoria:"vestidos",
       talles:["S","M","L","XL"],
-      imagen:["https://f.fcdn.app/imgs/6c0443/lolita.com.uy/lol/bde2/webp/catalogo/L148GSX4-7-3/1500-1500/falda-con-cut-out-y-tajos-laterales-negro.jpg","https://f.fcdn.app/imgs/45fd13/lolita.com.uy/lol/eacd/webp/catalogo/L148GSX4-7-4/1500-1500/falda-con-cut-out-y-tajos-laterales-negro.jpgg"],
+      imagen:["https://f.fcdn.app/imgs/6c0443/lolita.com.uy/lol/bde2/webp/catalogo/L148GSX4-7-3/1500-1500/falda-con-cut-out-y-tajos-laterales-negro.jpg","https://f.fcdn.app/imgs/778e52/lolita.com.uy/lol/d4f5/webp/catalogo/L148GSX4-7-2/1500-1500/falda-con-cut-out-y-tajos-laterales-negro.jpg","https://f.fcdn.app/imgs/45fd13/lolita.com.uy/lol/eacd/webp/catalogo/L148GSX4-7-4/1500-1500/falda-con-cut-out-y-tajos-laterales-negro.jpg"],
       descripcion:"datos del producto2",
       precio:2190,
       fechaIngreso:12/12/2015},
@@ -92,7 +93,7 @@
       descripcion:"datos del producto",
       precio:399,
       fechaIngreso:12/12/1999},
-      {id:"R005",
+      {id:"R0033",
       nombre:"Remera Vigevano - Estampado 1",
       categoria:"remeras",
       talles:["S","M","L","XL"],
@@ -100,7 +101,14 @@
       descripcion:"datos del producto",
       precio:479,
       fechaIngreso:12/12/1999},
-      
+    {id:"J001",
+    nombre:"Vestido corto escote V - blanco",
+    categoria:"vestidos",
+    talles:["S","M","L","XL"],
+    imagen:[""],
+    descripcion:"Short de lino- Pinzas en delantera. Composición: 55% Lino, 45% Algodón.Altura de la modelo: 1.78cm, es talle 38 y usa S",
+    precio:2345,
+    fechaIngreso:12/12/1999}
       ]
                     
 

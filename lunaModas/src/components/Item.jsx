@@ -5,24 +5,22 @@ import { Card, CardHeader, CardBody, CardFooter,Heading,Image,Stack,Text,Divider
 const item = ({producto}) => {
   return (
     
-<Card maxW='sm' align="center" background={' #fdedec '}>
-  <CardBody>
-  <Link className='link' to={`/Item/${producto.id}`}> <Image
-    className='product-img'
-      src={producto.imagen[0]}
-      alt='imagen del producto'
-      borderRadius='lg'
-    /></Link>
-    <Stack>
-      <Heading className='product-title' fontSize='lg' >{producto.nombre}</Heading>
-      <Text className='product-price'>
-      $U {producto.precio} 
-      <Button >
-        cod:{producto.id}
-      </Button>
-      </Text>
+<Card className='card-item' align="center" background={' #fdedec '}>
+<Link className='card-link' to={`/Item/${producto.id}`}>
+  <CardBody className='itemBody'>
+   <img className='card-img' src={producto.imagen[0]} alt="" />
+    <Stack className='cardText'>
+    <Text className='card-title' fontSize="sm" align='center'>{producto.nombre}</Text>
+      
+      <Text className='card-price' fontSize="0.8rem" align='center' padding='0'>
+      $U {producto.precio} <span className='card-cod'>{producto.id}</span>  </Text>
+      
+       
+      
+     
     </Stack>
   </CardBody>
+  </Link>
  </Card>
 
 

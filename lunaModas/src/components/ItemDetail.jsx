@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
+import {Link} from 'react-router-dom';
 import { Flex, Box, Text, Button } from '@chakra-ui/react';
+import {cartContext } from '../context/ShopingCartContext';
 import Carousel from 'react-bootstrap/Carousel';
 
 const ItemDetail = ({ producto }) => {
   const [talleSeleccionado, setTalleSeleccionado] = useState(null);
-  const [cantidad, setCantidad] = useState(1); // Valor inicial del contador
-
+  const [cantidad, setCantidad] = useState(1); 
+  const { actualizarCompra } = useContext(cartContext); 
+ 
   useEffect(() => {
    
     if (producto.talles.length > 0) {
@@ -28,12 +31,14 @@ const ItemDetail = ({ producto }) => {
       setCantidad(cantidad - 1);
     }
   };
+  const handleCompra = () => {
+   
+    actualizarCompra({ item: producto, talle: talleSeleccionado, cantidad: cantidad });
+  };
 
   return (
     <Flex className='main'>
-      <Box>
-        <h1>{producto.nombre}</h1>
-      </Box>
+      
       <Flex className='product-detail'>
         <Carousel className='prod-carousel'>
           {producto.imagen.map((imagenSrc, index) => (
@@ -44,8 +49,9 @@ const ItemDetail = ({ producto }) => {
         </Carousel>
 
         <Flex className='datos-producto'>
+       <Text className="producto-titulo">{producto.nombre}</Text> 
           <Text>{producto.descripcion}</Text>
-          <Text>
+          <Text className='cardTalles'>
             Talles Disponibles: {producto.talles.map((talle, index) => (
               <Button
                 key={index}
@@ -58,20 +64,22 @@ const ItemDetail = ({ producto }) => {
               </Button>
             ))}
           </Text>
-          <Flex className='comprar'>
-            <Text className='product-price'>Precio: $U {producto.precio*cantidad}</Text>
-            <Flex>cantidad:
+          <Flex className='comprar' >
+            <Text className='product-price'  fontWeight='bold' >Precio: $U {producto.precio*cantidad}</Text>
+            <Flex><Text paddingRight='1rem'>cantidad:</Text>
               <Button colorScheme='pink' size="sm" variant='outline' onClick={decrementarCantidad}>
                 -
               </Button>
-              <Text mx="2">{cantidad}</Text>
+              <Text className='cantidad'fontWeight='bold'>{cantidad}</Text>
               <Button colorScheme='pink' size="sm" variant='outline' onClick={incrementarCantidad}>
                 +
               </Button>
             </Flex>
-            <Button colorScheme='pink'  onClick={() => alert(`Comprar ${cantidad} unidades`)}>
+            <Link to={`/products/${producto.categoria}`}>
+            <Button colorScheme='pink' onClick={handleCompra}  >
               Comprar
             </Button>
+            </Link>
           </Flex>
         </Flex>
       </Flex>

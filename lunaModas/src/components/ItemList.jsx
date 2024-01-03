@@ -6,7 +6,7 @@ const ItemList = ({ productos }) => {
   
 
   return (
-    <Flex className='products-container'>
+    <Flex className='cards-container'>
       {productos.map((producto) => (
       
       <Item 

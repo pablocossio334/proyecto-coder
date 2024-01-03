@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { cartContext } from '../context/shopingCartContext'; // Correct import path
 import { IconButton } from '@chakra-ui/react';
-import { BsCart4 } from "react-icons/bs";
+import { BsCart4 } from 'react-icons/bs';
+
 const CartWidget = () => {
+  const { compras } = useContext(cartContext); // Use the correct context
+
   return (
     <div className="cartWidget">
-      <IconButton
-      aria-label='CartWidget'
-      icon={<BsCart4/>}
-      size='md'
-      fontSize='2rem'
-      
-      
-      ></IconButton>
-    <div className="cartNumber">3</div>
+      {/* Render your cart items or any other cart-related content */}
+      <Link to="/Checkout">
+        <IconButton icon={<BsCart4 />} aria-label="Shopping Cart" />
+        <span>{compras.length}</span>
+      </Link>
     </div>
-    
-  )
+  );
 }
 
-export default CartWidget
+export default CartWidget;
