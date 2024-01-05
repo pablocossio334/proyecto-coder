@@ -5,10 +5,11 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import AboutUs from './components/AboutUs';
 import Home from './components/Home';
-import Checkout from './components/Checkout';
+import CartView from './components/CartView';
 import Footer from './components/Footer';
 import { Flex } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemLoading from './components/ItemLoading';
 
 export const cartContext = React.createContext(null);
 
@@ -25,7 +26,8 @@ function App() {
             <Route exact path='/products/:cat' element={<ItemListContainer />} />
             <Route exact path='/item/:id' element={<ItemDetailContainer />} />
             <Route exact path='/AboutUs' element={<AboutUs />} />
-            <Route exact path='/Checkout' element={<Checkout />} />
+            <Route exact path='/CartView' element={<CartView />} />
+            <Route exact path='/ItemLoading' element={<ItemLoading />} />
             <Route path='*' element={<ItemListContainer />} />
           </Routes>
         </BrowserRouter>

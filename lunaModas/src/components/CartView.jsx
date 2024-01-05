@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { cartContext } from '../context/ShopingCartContext';
 import { Flex, Table, TableCaption, Thead, Tbody, Tr, Th, Td, Image } from '@chakra-ui/react';
 
-const Checkout = () => {
+const CartView = () => {
   const { compras, quitarElemento } = useContext(cartContext); // Destructure quitarElemento from the context
 
   return (
@@ -44,4 +44,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CartView;

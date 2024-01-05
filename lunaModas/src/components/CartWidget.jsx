@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <div className="cartWidget">
       {/* Render your cart items or any other cart-related content */}
-      <Link to="/Checkout">
+      <Link to="/CartView">
         <IconButton icon={<BsCart4 />} aria-label="Shopping Cart" />
         <span>{compras.length}</span>
       </Link>
