@@ -1,47 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ProgressBar from './Cargando';
 import { Flex } from '@chakra-ui/react';
 import ItemList from './ItemList';
-import ProgressBar from './Cargando';
-import productos from './Datos';
-import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const ItemListContainer = () => {
   const { cat } = useParams();
+  const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [productosCategoria, setProductosCategoria] = useState([]);
-  let titulo;
 
   useEffect(() => {
     setLoading(true);
+    const db = getFirestore();
+    const itemCollection = collection(db, "productos");
 
-    const timeoutId = setTimeout(() => {
-      let filteredProductos = productos.filter((producto) =>
-        cat ? producto.categoria === cat : true
-      );
-
-      setProductosCategoria(filteredProductos);
+    getDocs(itemCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => doc.data());
+      const productosFiltrados = docs.filter((producto) => producto.categoria === cat);
+      setProductos(productosFiltrados);
+      
       setLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timeoutId);
-  }, [cat]);
-
-  if (productosCategoria.length === 0) {
-    setProductosCategoria(productos);
-    titulo = 'Bienvenidos a mi Tienda';
-  } else {
-    titulo = 'Categoria: ' + cat;
-  }
+    });
+  }, [cat]); 
 
   return (
     <Flex className='main'>
-      <h1> {titulo}</h1>
-      {loading ? (
-        <ProgressBar loading={loading} duration={3000} />
-      ) : (
-        <ItemList productos={productosCategoria} />
-      )}
-    </Flex>
+    <h1>Categoria: {cat}</h1>
+    {loading ? (
+      <ProgressBar loading={loading} />
+    ) : (
+      <>
+        {productos.length === 0 ? (
+          <h2>No hay productos en la categoría seleccionada</h2>
+        ) : (
+          <ItemList productos={productos} />
+        )}
+      </>
+    )}
+  </Flex>
   );
 };
 

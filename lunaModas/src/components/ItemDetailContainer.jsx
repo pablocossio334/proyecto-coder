@@ -1,41 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import productos from './Datos';
+import { Flex } from '@chakra-ui/react';
 import ItemDetail from './ItemDetail';
-import Home from './Home'; // Asegúrate de tener el componente Home correctamente importado
+import Home from './Home'; 
+import Cargando from './Cargando'
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
+import { BsTypeH1 } from 'react-icons/bs';
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const [mostrarProducto, setMostrarProducto] = useState(null);
-  const [productoNoEncontrado, setProductoNoEncontrado] = useState(false); // Corregido el nombre y el uso de la variable
-
+  const [item, setItem] = useState(null);
+  const [load,setLoad]=useState(true);
   useEffect(() => {
-    const buscarProducto = () => {
-      return new Promise((resolve, reject) => {
-        const productoEncontrado = productos.find((producto) => producto.id == id);
+    const db = getFirestore()
+    const oneItem = doc(db,'productos',`${id}`)
+    getDoc(oneItem).then((snapshot)=>{
 
-        if (productoEncontrado) {
-          resolve(productoEncontrado);
-        } else {
-          setProductoNoEncontrado(true); // Corregido el nombre de la variable
-          reject(new Error('Producto no encontrado'));
-        }
-      });
-    };
-
-    buscarProducto()
-      .then((producto) => setMostrarProducto(producto))
-      .catch((error) => {
-        console.error(error.message);
-      });
-  }, [id]);
+      if (snapshot.exists()){
+        const doc= snapshot.data()
+      
+      setItem(doc)
+      setLoad(false)
+      
+      }
+    })
+  },[])
 
   return (
-    <>
-      {mostrarProducto && <ItemDetail producto={mostrarProducto} />}
-      {productoNoEncontrado && <Home />}
-    </>
-  );
-};
+    <Flex className='main'>
+      {load?(<Cargando/>):(<ItemDetail
+    producto={item}/>)}
+    </Flex>
 
-export default ItemDetailContainer;
+  )
+}
+
+export default ItemDetailContainer

@@ -1,19 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { cartContext } from '../context/shopingCartContext'; // Correct import path
+import { cartContext } from '../context/shopingCartContext';
 import { IconButton } from '@chakra-ui/react';
 import { BsCart4 } from 'react-icons/bs';
 
 const CartWidget = () => {
-  const { compras } = useContext(cartContext); // Use the correct context
+  const { compras, contarElementos } = useContext(cartContext);
+  const [cantidad, setCantidad] = useState(0);
+
+  useEffect(() => {
+    
+    const totalElementos = contarElementos();
+    setCantidad(totalElementos);
+  }, [compras, contarElementos]);
 
   return (
     <div className="cartWidget">
-      {/* Render your cart items or any other cart-related content */}
       <Link to="/CartView">
-        <IconButton icon={<BsCart4 />} aria-label="Shopping Cart" />
-        <span>{compras.length}</span>
+        <IconButton 
+        icon={<BsCart4 />} 
+        aria-label="Shopping Cart"
+        isDisabled={cantidad===0} 
+        variant='outline'
+        colorScheme='pink'/>
       </Link>
+      <span>{cantidad}</span>
     </div>
   );
 }

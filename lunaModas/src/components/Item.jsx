@@ -15,13 +15,8 @@ const item = ({producto}) => {
    <img className='card-img' src={producto.imagen[0]} alt="" />
     <Stack className='cardText'>
     <Text className='card-title' fontSize="sm" align='center'>{producto.nombre}</Text>
-      
-      <Text className='card-price' fontSize="0.8rem" align='center' padding='0'>
+    <Text className='card-price' fontSize="0.8rem" align='center' padding='0'>
       $U {producto.precio} <span className='card-cod'>{producto.id}</span>  </Text>
-      
-      
-      
-     
     </Stack>
   </CardBody>
   </Link>

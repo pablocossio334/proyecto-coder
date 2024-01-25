@@ -1,31 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 .max-container{
   background-color: white;
-  border-top-right-radius: 2%;
-  border-top-left-radius: 2%;
-
-  height: 90%;
+  height: 100%;
   width: 95%;
   display:flex;
   flex-direction: column;
   }
   .navBar{
-    
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    
     display:flex;
     align-items:flex-end;
     border-bottom: 1px solid gray;
     width: 100%;
-    height: 30%;
+    height: 20%;
+   
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
     
-    
+  }
+  h1{
+    font-family: 'Kalnia', serif;
+    text-decoration:underline;
   }
   .nav-link{
     color:black !important;
@@ -35,18 +33,20 @@
   }
   
   .brand{
-    display:flex;
     
+    display:flex;
     align-items:center;
+    
     justify-content: center;
     height: 100%;
-    width: 15%;
+    width: 10%;
     
   }
   .brand img{
-    
+    margin-top: 1rem;
     height: 100%;
     width: 85%;
+    margin-bottom: 0.5rem;
     transition: transform 0.5s
   }
   .chakra-card{
@@ -55,6 +55,53 @@
   .brand img:hover{
     transform: rotate(360deg);
   }
+  .izquierdaHome ,.derechaHome{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+ 
+  height: 100%;
+  width: 25%;
+  }
+
+  .centroHome{
+    
+    height: 100%;
+    width: 50%;
+  }
+  .categoriasHome{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15rem;
+    flex-wrap: wrap;
+  }
+  .seccionHome img{
+    margin-top: 1rem;
+    height: 55%;
+    width: 80%;
+  }
+  .textSeccionHome
+  {
+    font-family: 'Grape Nuts', cursive;
+   
+    font-weight: bold;
+  }
+.seccionHome{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45%;
+  width: 45%;
+  border-radius: 10px;
+  background-color: #ffd6e0;
+}
+
+
+
 .cartWidget{
   display:flex;
   margin-left: auto;
@@ -65,9 +112,10 @@
 .nav{
 
   margin-bottom:1rem;
+  margin-left: 4rem;
   font-family: 'Kalnia', serif;
   color:pink;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .show{
@@ -104,8 +152,8 @@
 
  .main{
  width: 100%;
- height: 80rem;
- overflow: auto;
+ height: auto;
+
  flex-direction:column;  
  align-items: center;
  animation: aparecerDesdeDerecha 1s ease-in-out;
@@ -144,10 +192,8 @@
 
 .card-title{
   font-family: 'Single Day', cursive;
-  
   text-decoration:underline;
- 
-  
+
 }
 
 .card-link{
@@ -184,17 +230,12 @@
 
  
 
- .prod-carousel{
-  
-  height: 25rem;
-  width: 20rem;
-  
- }
- .product-detail{
+ 
+ .productDetail{
   margin-top: 2rem;
   width: 90%;
  
-  height: 80%;
+  height: 100%;
   border-radius: 2%;
   font-family: 'Dosis', sans-serif;
   background-color: rgb(231, 176, 184);
@@ -222,9 +263,10 @@
  }
   
  .prod-carousel{
-  
-  height: 100%;
-  width: 40%;
+  margin-top: 1%;
+  margin-left:1%;
+  height: 90%;
+  width: 30%;
  }
  .prod-carousel-img{
 
@@ -256,58 +298,124 @@ width: 100%;
  
 
 
-
- .datos-producto{
-
-  width: 100%;
-  flex-direction: column;
-  padding:1rem;
- 
- 
-  }
+.mainDetail{
+  display:flex;
+height: 18rem;
+background-color: rgb(237, 198, 205);
+width: 80%;
+border-radius: 16px;
+flex-direction: row;
+}
+.datosProducto{
+display:flex;
+width: 100%;
+flex-direction: column;
+margin-left: 1rem;
+}
   .cardTalles{
     
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 .producto-titulo{
   font-family: 'Single Day', cursive;
   font-style: oblique;
   text-decoration: underline;
   text-align: center;
+  margin-left: 1rem;
   font-size: 2rem;
 }
  .button-tails{
   margin-left:1rem;
   
+  
  }
  .comprar{
   margin-top: auto;
-
+margin-right: 2rem;
  justify-content:space-between;
+ 
+}
 
-  
+
+ 
+  .cart{
+  height: 15rem;
+  overflow: auto;
+  justify-content: center;
+  border-right: 1px solid pink;
   }
-
-  
   .tdImagen{
-    width: 2rem;
-    
+   height: 3rem;
+   
   }
+  .tdNombre ,.tdTalle,.tdCantidad{
+   
+    border-right: 2px solid gray;
+    justify-content: center;
+    text-align: center;
+  }
+  .cartBody tr:nth-child(even) {
+    background-color: #ffd6e0;  /* Color rosado para los renglones pares */
+  }
+  
+  .cartBody tr:nth-child(odd) {
+    background-color: transparent;  /* Sin color para los renglones impares */
+  }
+  
+  .tr{
+    border:1px solid pink;
+  }
+  
+
+  
   .tdImagen img{
     
-    width: 3rem;
-    height: 3rem;
+    width: 100%;
+    height: 100%;
   }
   
   .tdNombre{
     font-family: 'Single Day', cursive;
   font-style: oblique;
   text-decoration: underline;
-    width: 15rem;
-    justify-content: center;
+  
+  justify-content: center;
   }
-
+  .tdCantidad{
+    font-size: 0.9rem;
+  }
+  .totales{
+margin-left: 1rem;
+   
+  }
+  .total{
+    border-bottom: 1px solid pink;
+  }
   .barraCarga{
    
     width: 30rem;
+  }
+  .datosCliente{
+    display:flex;
+    width: 100%;
+   
+    flex-direction: column;
+    
+   }
+.boxForm{
+  display:flex;
+ padding-top: 1rem;
+ padding-bottom: 1rem;
+  justify-content: center;
+ 
+}
+ .labelForm{
+  padding-left: 1rem;
+ padding-right: 1rem;
+ }
+ 
+  .Footer{
+    margin-top: 2rem;
+    border-top:2px dotted pink;
+    justify-content: center;
   }
