@@ -94,11 +94,11 @@ const Form = () => {
 
         <form className="datosCliente" action="" onSubmit={handleSubmit}>
         
-        <Box className='boxForm'  bg="pink.200" borderRadius="md">
+  <Box className='boxForm'  bg="pink.200" borderRadius="md">
   <label className='labelForm' htmlFor="cedula">Cedula:</label>
-  <Input  type="text" id="nombre" value={cedula} onChange={(e) => setCedula(e.target.value)} />
+  <Input  type="number" id="nombre" value={cedula} onChange={(e) => setCedula(e.target.value)} />
   <label className='labelForm' htmlFor="email">Email:</label>
-  <Input type="text" id="apellido" value={email} onChange={(e) => setEmail(e.target.value)} />
+  <Input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
     </Box>
   <Box className='boxForm'  bg="pink.200" borderRadius="md">
   <label className='labelForm' htmlFor="nombre">Nombres:</label>
