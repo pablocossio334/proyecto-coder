@@ -59,4 +59,4 @@ integracion con api de pago
 
 
 
-![MiLogo](https://pablocossio.net/java/img/LOGO.png)
+[MiLogo](https://pablocossio.net/java/img/LOGO.png)
