@@ -142,12 +142,17 @@ const Form = () => {
   <Box className='boxForm'  bg="pink.200" borderRadius="md">
   
   <label className='labelForm' htmlFor="metodoPago">Metodo de Pago:</label>
-  <Select id="metodoPago" value={metodoPago} onChange={(e) => setMetodoPago(e.target.value)}>
+  <Select
+  id="metodoPago"
+  value={metodoPago}
+  onChange={(e) => setMetodoPago(e.target.value)}
+
+>
   <option key="Tarjeta" value="Tarjeta">Tarjeta</option>, 
   <option key="MercadoPago" value="MercadoPago">MercadoPago</option>,
   <option key="Transferencia" value="Transferencia">Transferencia Bancaria</option>,   
   </Select>
-  <Button type="submit">ENVIAR</Button>
+  <Button size='sm' colorScheme='white' color={'Black'} border={'1px solid black'}  type="submit">ENVIAR</Button>
     </Box> 
       </form>
       ) : (

@@ -315,10 +315,11 @@ width: 100%;
 
 
 .mainDetail{
+  margin-top:2rem;
   display:flex;
 height: 18rem;
 background-color: rgb(237, 198, 205);
-width: 80%;
+width: 95%;
 border-radius: 16px;
 flex-direction: row;
 }
@@ -425,9 +426,16 @@ margin-left: 1rem;
   justify-content: center;
  
 }
+.boxForm1{
+  display:flex;
+  width: 80%;
+}
  .labelForm{
   padding-left: 1rem;
  padding-right: 1rem;
+ }
+ .metodoPago{
+ 
  }
  
   .Footer{
