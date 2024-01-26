@@ -468,6 +468,10 @@ margin-left: 1rem;
     flex-direction: row;
 
   }
+  .redesTitulo{
+    font-family: 'Kalnia', serif;
+  }
   .textoRed{
-    font-size: 0.8rem;
+    font-family: 'Grape Nuts', cursive;
+    
   }

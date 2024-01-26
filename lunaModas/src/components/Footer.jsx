@@ -22,6 +22,7 @@ const Footer = () => {
         ></iframe>
       </Box>
       <Box className='footerDerecha'>
+        <h2 className='redesTitulo'>Redes Sociales</h2>
         <Box className="footerRed">
         <FaFacebookSquare className='iconoRed' size={15} color='blue'  /><Text  className='textoRed'>lunamodas</Text>
         </Box>
