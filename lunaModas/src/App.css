@@ -70,6 +70,15 @@
     height: 100%;
     width: 50%;
   }
+  .linkHome:hover{
+    opacity: 0.7;
+  }
+  .centroHome img{
+    height: 100%;
+    width: 100%;
+    border:1px solid pink;
+
+  }
   .categoriasHome{
     display:flex;
     align-items: center;
@@ -78,6 +87,7 @@
     height: 15rem;
     flex-wrap: wrap;
   }
+
   .seccionHome img{
     margin-top: 1rem;
     height: 55%;
@@ -89,13 +99,19 @@
    
     font-weight: bold;
   }
+  .linkHome{
+    
+    height: 45%;
+    width: 45%;
+
+  }
 .seccionHome{
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 45%;
-  width: 45%;
+  height: 100%;
+    width: 100%;
   border-radius: 10px;
   background-color: #ffd6e0;
 }
@@ -415,7 +431,38 @@ margin-left: 1rem;
  }
  
   .Footer{
-    margin-top: 2rem;
-    border-top:2px dotted pink;
+    width: 100%;
+    height: 20rem;
+    border:2px solid pink;
     justify-content: center;
+    align-items: center;
+  }
+  .footerDerecha,
+  .footerIzquierda
+  {
+    height: 100%;
+    width: 30%;
+  }
+  .footerCentro{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .footerIzquierda img{
+    width: 100%;
+    height: 100%;
+  }
+  .footerDerecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerRed{
+    
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+  .textoRed{
+    font-size: 0.8rem;
   }

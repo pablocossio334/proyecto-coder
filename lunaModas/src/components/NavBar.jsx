@@ -24,6 +24,9 @@ const NavBar = () => {
           <NavDropdown.Item ><Link  className='link' to={'/products/remeras'} > Remeras</Link></NavDropdown.Item>
           <NavDropdown.Item ><Link  className='link' to={'/products/zapatos'} > Zapatos</Link></NavDropdown.Item>
           <NavDropdown.Item ><Link  className='link' to={'/products/camisas'} > Camisas</Link></NavDropdown.Item>
+          <NavDropdown.Item ><Link  className='link' to={'/products/lenceria'} > Lenceria</Link></NavDropdown.Item>
+          <NavDropdown.Item ><Link  className='link' to={'/products/tbano'} > Trajes de Baño</Link></NavDropdown.Item>
+          <NavDropdown.Item ><Link  className='link' to={'/products/tbano'} > Accesorios</Link></NavDropdown.Item>
       </NavDropdown>
       <Nav.Item>
       <Nav.Link ><Link className='link' to={'/'} >Acerca</Link></Nav.Link>
