@@ -10,7 +10,7 @@ Este proyecto fue creado por Pablo Cossio como parte de su trabajo final para el
 - **List.jsx**: Muestra los datos de un producto y permite hacer clic para ir a ItemDetailContainer.
 - **ItemDetailContainer.jsx**: Obtiene un producto por su ID y se lo pasa a ItemDetail para mostrarlo.
 - **ItemDetail.jsx**: Muestra detalles del producto y permite al usuario comprar eligiendo talla y cantidad, guardando en el contexto y en la memoria del navegador.
-**ItemCount.jsx**: Componente que controla cantidad de articulos y precio y el boton comprar.
+  **ItemCount.jsx**: Componente que controla cantidad de articulos y precio y el boton comprar.
 - **Cargando.jsx**: Barra de carga utilizada para esperar que se obtengan los productos antes de renderizar, se usa en ItemDetailContainer y en ItemListContainer.
 - **CartView.jsx**: Muestra los productos comprados con opciones para cambiar la cantidad, eliminar productos o finalizar la compra, que lleva al formulario.
 - **Form.jsx**: Obtiene datos de productos comprados y agrega datos del comprador (nombre, apellido, dirección, teléfono, etc.), y los guarda en Firebase.
@@ -28,11 +28,14 @@ Este proyecto fue creado por Pablo Cossio como parte de su trabajo final para el
   <Route exact path='/products/:cat' element={<ItemListContainer />} />
   <Route exact path='/item/:id' element={<ItemDetailContainer />} />
   <Route exact path='/AboutUs' element={<AboutUs />} />
-  <Route exact path='/Document' element={<Document />} />
   <Route exact path='/Form' element={<Form />} />
   <Route exact path='/CartView' element={<CartView />} />
   <Route path='*' element={<Home />} />
 </Routes>
+
+## Apis
+react router dom
+context
 
 ## Librerías de Estilos
 
