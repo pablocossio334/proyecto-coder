@@ -17,7 +17,7 @@ return (
         ¡Orden enviada exitosamente!
         </AlertTitle>
         <AlertDescription maxWidth="sm">
-        <h1>Orden numero {orderId}</h1>
+        <h1>FELICITACIONES!!!</h1>
         Gracias por enviar tu orden. Nuestro equipo se pondrá en contacto contigo pronto.
         </AlertDescription>
         </Alert>
