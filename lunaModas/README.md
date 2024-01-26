@@ -57,6 +57,6 @@ modificar articulos
 integracion con api de pago
 
 
-## Logotipo
 
-![Mi Logo](https://pablocossio.net/java/img/LOGO.png)
+
+![MiLogo](https://pablocossio.net/java/img/LOGO.png)
